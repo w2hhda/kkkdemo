@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF201E1E"
+    tools:context="com.example.kkk.kkkdemo.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_v"
+        android:layout_width="330dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="50dp"
+        android:background="#000000">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="#109831"
+            android:paddingBottom="30dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#123121">
+
+
+
+                <master.flame.danmaku.ui.widget.DanmakuView
+                    android:id="@+id/sv_danmaku_v"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/op"
+                    android:background="#ffffff"
+                    android:layout_centerInParent="true"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/text"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:onClick="onTextClick"
+                        android:inputType="textPersonName"
+                        android:text="快捷回复" />
+                    <TextView
+                        android:gravity="center"
+                        android:onClick="onCallClick"
+                        android:id="@+id/call"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="语音回复" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:background="#ffffff"
+                    android:id="@+id/op_text"
+                    android:layout_centerInParent="true"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text1"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:onClick="onText1Click"
+                        android:inputType="textPersonName"
+                        android:text="现在正忙，稍后联系" />
+                    <TextView
+                        android:gravity="center"
+                        android:onClick="onText1Click"
+                        android:id="@+id/text2"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="目前不方便，稍后联系" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:background="#ffffff"
+                    android:id="@+id/op_call"
+                    android:layout_centerInParent="true"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:gravity="center"
+                        android:onClick="onCall1Click"
+                        android:id="@+id/text3"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="录音中..." />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@+id/zfbView"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:clickable="true"
+                        android:src="@drawable/zfb"
+                        android:onClick="onZFClick"
+                        android:scaleType="fitXY"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#cccccc">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:onClick="onZFBClick"
+            android:text="支付宝付款" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:onClick="onQieHuanClick"
+            android:text="弹幕通知" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

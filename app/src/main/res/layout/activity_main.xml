@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF201E1E"
+    tools:context="com.example.kkk.kkkdemo.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_v"
+        android:layout_width="330dp"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/round_bg">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:background="@drawable/round_bg"
+            android:paddingRight="30dp"
+            android:paddingTop="10dp">
+
+            <RelativeLayout
+                android:id="@+id/left"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/left"
+                android:background="#333333">
+
+                <master.flame.danmaku.ui.widget.DanmakuView
+                    android:id="@+id/sv_danmaku_v"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                     />
+
+                <LinearLayout
+                    android:id="@+id/op"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:background="#ffffff"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="textPersonName"
+                        android:onClick="onTextClick"
+                        android:text="快捷回复" />
+
+                    <TextView
+                        android:id="@+id/call"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="textPersonName"
+                        android:onClick="onCallClick"
+                        android:text="语音回复" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/op_text"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:background="#ffffff"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/text1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="textPersonName"
+                        android:onClick="onText1Click"
+                        android:text="现在正忙，稍后联系" />
+
+                    <TextView
+                        android:id="@+id/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="textPersonName"
+                        android:onClick="onText1Click"
+                        android:text="目前不方便，稍后联系" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/op_call"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:background="#ffffff"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/text3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="textPersonName"
+                        android:onClick="onCall1Click"
+                        android:text="录音中..." />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/zfbView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:onClick="onZFClick"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/zfb" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="54dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="#cccccc">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onZFBClick"
+            android:text="支付宝付款" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:onClick="onQieHuanClick"
+            android:text="弹幕通知" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="19dp"
+        android:layout_toLeftOf="@+id/relativeLayout"
+        android:layout_toStartOf="@+id/relativeLayout"
+        android:rotation="180"
+        android:text="MEIZU"
+        android:textColor="#fafafa"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_toLeftOf="@+id/textView"
+        android:layout_toStartOf="@+id/textView"
+        android:rotation="180"
+        android:text="Designed by Meixu\nLTE Mobile Phone Assemble in China"
+        android:textColor="#fafafa" />
+
+
+</RelativeLayout>
